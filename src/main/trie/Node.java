@@ -14,11 +14,13 @@ import java.util.LinkedList;
 public class Node {
     char content;
     boolean marker;
+    String name;
     Collection<Node> child;
     
     public Node(char c){
         child = new LinkedList<Node>();
         marker = false;
+        name = "";
         content = c;
     }
     
