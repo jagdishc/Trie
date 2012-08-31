@@ -14,13 +14,17 @@ import java.util.LinkedList;
 public class Node {
     char content;
     boolean marker;
-    String name;
+    Node parent;
     Collection<Node> child;
     
-    public Node(char c){
+    public Node(){
+        
+    }
+    
+    public Node(char c, Node current){
         child = new LinkedList<Node>();
         marker = false;
-        name = "";
+        parent = current;
         content = c;
     }
     
@@ -31,6 +35,13 @@ public class Node {
                     return eachChild;
                 }
             }
+        }
+        return null;
+    }
+    
+    public Node getParent(Node child){
+        if(child!=null){
+            return child.parent;
         }
         return null;
     }
