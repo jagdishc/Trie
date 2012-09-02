@@ -17,17 +17,24 @@ public class Node {
     Node parent;
     Collection<Node> child;
     
-    public Node(){
-        
-    }
+    public Node(){ }
     
+    /**
+     * Constructor to create a Node
+     * @param c is the character to be stored in the Node
+     * @param current is the parent node to the Node that is going to be created
+     */
     public Node(char c, Node current){
         child = new LinkedList<Node>();
         marker = false;
         parent = current;
         content = c;
     }
-    
+    /**
+     * Method that returns the corresponding sub node of the current node
+     * @param c is the content value of the sub node
+     * @return null if the node is not found or returns the corresponding sub node
+     */
     public Node subNode(char c){
         if(child!=null){
             for(Node eachChild:child){
@@ -38,7 +45,11 @@ public class Node {
         }
         return null;
     }
-    
+    /**
+     * 
+     * @param child
+     * @return 
+     */
     public Node getParent(Node child){
         if(child!=null){
             return child.parent;

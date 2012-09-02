@@ -4,8 +4,7 @@ build/
 nbbuild/
 dist/
 nbdist/
-nbactions.xml
-nb-configuration.xml
+
 
 # Class Files #
 *.class
@@ -15,8 +14,8 @@ nb-configuration.xml
 *.war
 *.ear
 
-# Properties #
-*.properties
+
 
 # Trie Demo #
 TrieTest.java
+
